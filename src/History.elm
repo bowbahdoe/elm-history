@@ -119,8 +119,8 @@ current (History store) =
 Think of it like time travel: If you go back in time and change what happens next,
 all your knowledge of the future is now irrelevant.
 -}
-to : History a -> a -> History a
-to (History store) next =
+to : a -> History a -> History a
+to next (History store) =
     History <|
         { back = store.current :: store.back
         , forward = []
