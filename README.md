@@ -6,7 +6,7 @@ the lines of undo and redo.
 
 [Try it on Ellie][1]
 
-[1]: https://ellie-app.com/4PhzmgHwHtPa1
+[1]: https://ellie-app.com/4Pj6KmNq6dpa1
 
 ```elm
 module Main exposing (main)
