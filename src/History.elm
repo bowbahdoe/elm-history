@@ -1,7 +1,8 @@
 module History exposing
     ( History
-    , new
+    , new, fromList
     , forward, back, current, to
+    , map
     )
 
 {-| This library gives you a way to manage a series of values where you are only interested in one
