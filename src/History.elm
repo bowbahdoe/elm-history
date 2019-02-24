@@ -1,7 +1,8 @@
 module History exposing
     ( History
-    , new
+    , new, fromList
     , forward, back, current, to
+    , map
     )
 
 {-| This library gives you a way to manage a series of values where you are only interested in one
@@ -12,7 +13,12 @@ a ["Zip List"][2]. This is meant to provide you with a better idea of what you c
 library for. Namely, you can use this data structure to power any feature that fits the pattern of
 "undo" and "redo".
 
-For more insights on why you might want to use this data structure, I highly reccomend watching [this talk][1]
+A History behaves similarly to how a web browser's back and forward buttons work. If you click a link in a browser
+(move the history "to" a new location), then the forward button will no longer work and you will only be able
+to move back. If you don't click any links, you can go back and forward as much as you want and you wont affect
+the overall "structure" of the History.
+
+For more insights on why you might want to use this data structure, I highly recommend watching [this talk][1].
 
 If you are here looking for a way to manage the actual history of a web browser, you should instead
 be looking at the [elm/Browser][3] package.
