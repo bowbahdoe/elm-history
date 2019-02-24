@@ -1,6 +1,6 @@
 {
     "type": "package",
-    "name": "emccue/elm-history",
+    "name": "bowbahdoe/elm-history",
     "summary": "A data structure for working with a non-empty progression of values",
     "license": "Apache-2.0",
     "version": "1.0.0",
