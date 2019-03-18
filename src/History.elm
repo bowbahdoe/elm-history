@@ -1,7 +1,7 @@
 module History exposing
     ( History
     , new, fromList
-    , forward, back, current, to
+    , forward, back, current, to, evolve
     , map
     )
 
@@ -35,7 +35,7 @@ be looking at the [elm/Browser][3] package.
 
 # Maneuvering
 
-@docs forward, back, current, to
+@docs forward, back, current, to, evolve
 
 
 # Transform
@@ -127,6 +127,14 @@ to next (History store) =
         , forward = []
         , current = next
         }
+
+
+{-| Moves the History to a new value obtained by applying a function to the current value. Just like `to`, this
+will erase any of your knowledge of the future.
+-}
+evolve : (a -> a) -> History a -> History a
+evolve f history =
+    to (f (current history)) history
 
 
 {-| Maps a function over all the values in the history.
