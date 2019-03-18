@@ -3,7 +3,7 @@
     "name": "bowbahdoe/elm-history",
     "summary": "A data structure for working with a non-empty progression of values",
     "license": "Apache-2.0",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "exposed-modules": [
         "History"
     ],
